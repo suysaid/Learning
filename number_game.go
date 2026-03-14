@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func checkNumber(n int) {
-	if n % 2 == 0 {
+	if n%2 == 0 {
 		fmt.Println("Even number")
 	} else {
 		fmt.Println("Odd number")

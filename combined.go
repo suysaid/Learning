@@ -2,33 +2,32 @@ package main
 
 import "fmt"
 
-type Student struct {
+type Students struct {
 	Name  string
-	Age   int
 	Score int
 }
 
+func (s Students) display() {
+	fmt.Println("Name:", s.Name)
+	fmt.Println("Score:", s.Score)
+	fmt.Println()
+}
+
 func main() {
-	var students []Student
+	var students []Students
 
 	for i := 1; i <= 3; i++ {
-		var s Student
+		var s Students
 		fmt.Print("Enter Name: ")
 		fmt.Scan(&s.Name)
-
-		fmt.Print("Enter Age: ")
-		fmt.Scan(&s.Age)
 
 		fmt.Print("Enter Score: ")
 		fmt.Scan(&s.Score)
 
 		students = append(students, s)
 	}
-	for _, s := range students {
-		fmt.Println("Name:", s.Name)
-		fmt.Println("Age:", s.Age)
-		fmt.Println("Score:", s.Score)
-		fmt.Println()
-	}
 
+	for _, s := range students {
+		s.display()
+	}
 }

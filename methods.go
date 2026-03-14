@@ -8,6 +8,13 @@ type Student struct {
 	Score int
 }
 
+func (s Student) display() {
+	fmt.Println("Name:", s.Name)
+	fmt.Println("Age:", s.Age)
+	fmt.Println("Score:", s.Score)
+	fmt.Println()
+}
+
 func main() {
 	var students []Student
 
@@ -25,10 +32,7 @@ func main() {
 		students = append(students, s)
 	}
 	for _, s := range students {
-		fmt.Println("Name:", s.Name)
-		fmt.Println("Age:", s.Age)
-		fmt.Println("Score:", s.Score)
-		fmt.Println()
+		s.display()
 	}
 
 }

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func greetUser()  {
+func greetUser() {
 	var Name string
 	fmt.Print("What's your name?")
 	fmt.Scan(&Name)
@@ -10,8 +10,8 @@ func greetUser()  {
 	fmt.Println("Hello", Name)
 }
 
-func main()  {
+func main() {
 	greetUser()
 	greetUser()
-	
+
 }
